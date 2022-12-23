@@ -1,0 +1,24 @@
+body {
+  margin: 5%;
+  margin-bottom: 10%;
+  padding: 10 px;
+}
+
+#navbarSupportedContent {
+  padding: 10px;
+}
+
+#navbarSupportedContent li {
+  padding: 10px;
+}
+
+#details {
+  margin-top: 30%;
+  background-color: bisque;
+}
+
+#addStylist {
+  text-align: center;
+  color:rgb(163, 48, 16);
+  font-size: 50px;
+}
