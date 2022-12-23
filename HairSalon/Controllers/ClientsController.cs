@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using HairSalon.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace HairSalon.Controllers
 {
@@ -21,8 +22,9 @@ namespace HairSalon.Controllers
       return View(model);
     }
 
-    public ActionResult Create()
+    public ActionResult Create(int id)
     {
+      ViewBag.stId = id;
       return View();
     }
 
@@ -31,7 +33,7 @@ namespace HairSalon.Controllers
     {
       _db.Clients.Add(client);
       _db.SaveChanges();
-      return RedirectToAction("Index");
+      return RedirectToAction("Index", "Stylists");
     }
 
     public ActionResult Details(int id)

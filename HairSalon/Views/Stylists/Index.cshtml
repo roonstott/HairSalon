@@ -24,6 +24,9 @@
             <h5 class="card-title">@stylist.FirstName</h5>
             <p class="card-text">@stylist.FirstName @stylist.LastName prefers to be called @stylist.GoesBy. Their specialty is @stylist.Specialty</p>
             @Html.ActionLink("See Full List of Clients", "Details", "Stylists", new {id = stylist.StylistId})
+            <br>
+            <br>
+            @Html.ActionLink("Add A New Client", "Create", "Clients", new {id = stylist.StylistId})
           </div>
         </div>
       </div>

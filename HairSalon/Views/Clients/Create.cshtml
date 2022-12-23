@@ -1,3 +1,30 @@
 @{
   Layout = "_Layout";
 }
+
+@model HairSalon.Models.Client
+
+<h2 id="add">Add A Client</h2>
+<div class="card">
+  <div class="card-body">    
+    <div class="row">
+      <div class="col-5">
+        @using (Html.BeginForm()) 
+        {
+          @Html.LabelFor(model => model.FirstName, "First Name")<br>
+          @Html.TextBoxFor(model => model.FirstName)<br><br>
+          @Html.LabelFor(model => model.LastName, "Last Name")<br>  
+          @Html.TextBoxFor(model => model.LastName)<br><br>
+          @Html.LabelFor(model => model.GoesBy, "Nickname")<br>
+          @Html.TextBoxFor(model => model.GoesBy)<br><br>
+          @Html.LabelFor(model => model.Email, "Email Address")<br>
+          @Html.TextBoxFor(model => model.Email)<br><br>             
+          <br><button type="submit" class="btn btn-primary">New Client</button>
+        }
+      </div>
+      <div class="col-7">
+        <img class="card-img" src="https://placekitten.com/1000/650" alt="Card image cat"> 
+      </div>
+    </div>
+  </div>
+</div>

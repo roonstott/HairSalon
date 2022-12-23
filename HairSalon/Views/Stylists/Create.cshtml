@@ -10,13 +10,13 @@
       <div class="col-5">
         @using (Html.BeginForm()) 
         {
-          @Html.LabelFor(model => model.FirstName)<br>
+          @Html.LabelFor(model => model.FirstName, "First Name")<br>
           @Html.TextBoxFor(model => model.FirstName)<br><br>
-          @Html.LabelFor(model => model.LastName)<br>  
+          @Html.LabelFor(model => model.LastName, "Last Name")<br>  
           @Html.TextBoxFor(model => model.LastName)<br><br>
-          @Html.LabelFor(model => model.GoesBy)<br>
+          @Html.LabelFor(model => model.GoesBy, "Nickname")<br>
           @Html.TextBoxFor(model => model.GoesBy)<br><br>
-          @Html.LabelFor(model => model.Specialty)<br>
+          @Html.LabelFor(model => model.Specialty, "Specialty")<br>
           @Html.TextBoxFor(model => model.Specialty)<br><br>
           <br><button type="submit" class="btn btn-primary">New Stylist</button>
         }
