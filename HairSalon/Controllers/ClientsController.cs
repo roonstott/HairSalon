@@ -22,15 +22,17 @@ namespace HairSalon.Controllers
       return View(model);
     }
 
-    public ActionResult Create(int id)
+    public ActionResult Create(int id, string name)
     {
       ViewBag.stId = id;
+      ViewBag.name = name;
       return View();
     }
 
     [HttpPost]
-    public ActionResult Create(Client client)
+    public ActionResult Create(Client client, int id)
     {
+      client.StylistId = id;
       _db.Clients.Add(client);
       _db.SaveChanges();
       return RedirectToAction("Index", "Stylists");
