@@ -7,8 +7,8 @@
 ## Technologies Used
 
 * _C# and .NET 6.0_
-* _ASP.NET core MVC
-* _Entity Framework Core
+* _ASP.NET core MVC_
+* _Entity Framework Core_
 * _MySQL community server_
 * _MySQL Workbench_
 * _VS Code_
@@ -16,27 +16,33 @@
 
 ## Description
 
-_This web app is intended for a hypothetical client who runs a small hair salon. The client has multiple stylists working form them, and numerous clients who are signed up with each stylist. Using the ASP.NET core MVC web development framework, this app structures the client and stylist information as object classes with a many-to-one relationship between clients and stylists. All model information is stored in a SQL database._
+_This web app is intended for a hypothetical client who runs a small hair salon. The client has multiple stylists working for them, and numerous clients who are signed up with each stylist. Using the ASP.NET core MVC web development framework, this app structures the client and stylist information as object classes with a many-to-one relationship between clients and stylists. All model information is stored in a SQL database._
 
 ## Setup/Installation Requirements
 
 * _Download the .NET framework if you do not already have it (version 6.0 or later)_
-  `https://dotnet.microsoft.com/en-us/download/dotnet`
-* _Download MySQL Community Server and MySQL Workbench if you don't already have them (both from this link). Make note of both the User ID (UID) and the Password (PWD) that you define in your setup configurations for MySQL. These values will have to be put into your appsettings.json file in a few steps_
-  `https://dev.mysql.com/downloads/`
+  _`https://dotnet.microsoft.com/en-us/download/dotnet`_
+  
+* _Download MySQL Community Server and MySQL Workbench if you don't already have them (both from this link). Make note of both the `User ID (UID)` and the `Password (PWD)` that you define in your setup configurations for MySQL. These values will go into your `appsettings.json` file in a few steps_
+  _`https://dev.mysql.com/downloads/`_
+  
 * _Clone this repository to your machine_
-* _Open the repository (VS Code is recommended) and crate a new file in the root directory called appsettings.json. Copy the following code into the file, with your own values or uid and pwd_
-  `{
+
+* _Open the repository (VS Code is recommended) and create a new file in the root directory called `appsettings.json`. Copy the following code into the file, with your own values for uid and pwd_
+  _`
+  {
   "ConnectionStrings": {
       "DefaultConnection": "Server=localhost;Port=3306;database=robert_onstott;uid=[***your user ID here ***];pwd=[*** your password here *** ];"
+    }
   }
-}`
+  `_
+  
 * _Open MySQL workbench and open local server 3306. Navigate to the Administration tab in the top left. Click the 6th icon down in the navigation bar 'Data Import/Restore'. Select 'Imort from Self Contained File' and select the robert_onstott.sql file in the root directory if this repository. The database is now being hosted on a local server on your machine_
 
 *_Navigate to the HairSalon directory one level down from the root directory and enter the command $dotnet run. This will start the local web server. Enter the URL https://localhost:5001 in a browser window. You are now interacting with the web app_
-  `$ cd HairSalon
-   $ dotnet run
-   https://localhost:5001`   
+  _`$ cd HairSalon`_
+  _`$ dotnet run`_
+  _`https://localhost:5001`_
 
 ## Known Bugs
 
