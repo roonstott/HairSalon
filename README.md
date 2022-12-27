@@ -34,20 +34,16 @@ _This web app is intended for a hypothetical client who runs a small hair salon.
  
  
   
-  ` 
-  
-  
-  {
-  
-    "ConnectionStrings": {
-    
-      "DefaultConnection": "Server=localhost;Port=3306;database=robert_onstott;uid=[***your user ID here ***];pwd=[*** your password here *** ];"
-      
-    }
-    
-  } 
-  
-  
+  `  
+       {
+
+         "ConnectionStrings": {
+
+           "DefaultConnection": "Server=localhost;Port=3306;database=robert_onstott;uid=[***your user ID here ***];pwd=[*** your password here *** ];"
+
+         }
+
+       }      
   `
   
   
@@ -56,15 +52,11 @@ _This web app is intended for a hypothetical client who runs a small hair salon.
 
 * _Navigate to the HairSalon directory one level down from the root directory and enter the command $dotnet run. This will start the local web server. Enter the URL https://localhost:5001 in a browser window. You are now interacting with the web app_
   
-  ` 
-  
-  
-  _$ cd HairSalon_
-  
-  _$ dotnet run_ 
-  
-  
-  
+  `   
+        _$ cd HairSalon_
+
+        _$ dotnet run_   
+
   `  
   
   _https://localhost:5001_
