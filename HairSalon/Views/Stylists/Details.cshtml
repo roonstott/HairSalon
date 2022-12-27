@@ -5,15 +5,25 @@
 @model HairSalon.Models.Stylist
 @using HairSalon.Models
 
+<h2>@Model.GoesBy's Clients</h2>
+<br>
+
 @if (Model.Clients.Count == 0)
 
 {
   <p>No Clients Added Yet</p>
 }
 
-<ul>
 @foreach (Client client in Model.Clients) 
-{
-<li>@client.FirstName @client.LastName @client.GoesBy | @Model.GoesBy</li>
+{  
+  <div class="card">
+  <div class="card-header">
+    @client.FirstName @client.LastName
+  </div>
+  <div class="card-body">
+    <p class="card-text">@client.FirstName prefers to go by @client.GoesBy</p>
+    <p>Email:  @client.Email.</p>
+    <p>Stylist is @Model.GoesBy because their preferred specialty is @Model.Specialty</p>
+  </div>
+</div>
 }
-</ul>

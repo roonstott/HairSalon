@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc;
 using HairSalon.Models;
 using System.Collections.Generic;
@@ -24,8 +25,9 @@ namespace HairSalon.Controllers
 
     public ActionResult Create(int id, string name)
     {
-      ViewBag.stId = id;
+      ViewBag.stId = id;      
       ViewBag.name = name;
+      ViewBag.stylists = _db.Stylists.ToList();
       return View();
     }
 

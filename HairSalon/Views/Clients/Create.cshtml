@@ -3,10 +3,24 @@
 }
 
 @model HairSalon.Models.Client
+@using HairSalon.Models
 
-@if (@ViewBag.name !="n/a")
+@if(ViewBag.stylists.Count == 0)
 {
-  <h2 id="add">Add A Client For @ViewBag.name</h2>
+  <h3>No stylists</h3>
+  @Html.ActionLink("You need to add at least one stylist to the system before you can add any new clients", "Create", "Stylists")
+}
+@if(ViewBag.stylists.Count != 0)
+{
+  @if (@ViewBag.name !="n/a")
+  {
+    <h2 id="add">Add A Client For @ViewBag.name</h2>
+  }
+  @if (@ViewBag.name == "n/a")
+  {
+    <h2 id="add">Add A Client</h2>
+  }
+
   <div class="card">
     <div class="card-body">    
       <div class="row">
@@ -21,10 +35,31 @@
             @Html.TextBoxFor(model => model.GoesBy)<br><br>
             @Html.LabelFor(model => model.Email, "Email Address")<br>
             @Html.TextBoxFor(model => model.Email)<br><br>
-            <input type="hidden" value="@ViewBag.stId" name="id" id="id">
+            
+            @if (@ViewBag.stId == 0) 
+            {
+              <label for="id">Stylist</label>
+              <select name="id" id="id">
+                @foreach(Stylist stylist in ViewBag.stylists)
+                {
+                  <option value="@stylist.StylistId">@stylist.GoesBy | @stylist.Specialty</option>
+                }
+              </select>
+              <br>
+              <br>
+            }
+
+            @if (@ViewBag.stId !=0)
+            {
+              <input type="hidden" value="@ViewBag.stId" name="id" id="id">
+              <br>
+              <br>
+            }
+            
             <button type="submit" class="btn btn-primary">Add Client</button>
 
           }
+
         </div>
         <div class="col-7">
           <img class="card-img" src="https://placekitten.com/1000/650" alt="Card image cat"> 
@@ -34,7 +69,5 @@
   </div>
 }
 
-@if (@ViewBag.name == "n/a") 
-{
-  <p>oops no stylist selected</p>
-}
+
+
