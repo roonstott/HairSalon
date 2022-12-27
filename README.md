@@ -33,6 +33,7 @@ _This web app is intended for a hypothetical client who runs a small hair salon.
 * _Open the repository (VS Code is recommended) and create a new file in the root directory called `appsettings.json`. Copy the following code into the file, with your own values for uid and pwd_
  
  `
+  
   {
   
     "ConnectionStrings": {
@@ -42,15 +43,20 @@ _This web app is intended for a hypothetical client who runs a small hair salon.
     }
     
   }
+  
   `
   
 * _Open MySQL workbench and open local server 3306. Navigate to the Administration tab in the top left. Click the 6th icon down in the navigation bar 'Data Import/Restore'. Select 'Imort from Self Contained File' and select the robert_onstott.sql file in the root directory if this repository. The database is now being hosted on a local server on your machine_
 
 * _Navigate to the HairSalon directory one level down from the root directory and enter the command $dotnet run. This will start the local web server. Enter the URL https://localhost:5001 in a browser window. You are now interacting with the web app_
   
-  _`$ cd HairSalon`_
+  `
   
-  _`$ dotnet run`_
+  _$ cd HairSalon_
+  
+  _$ dotnet run_
+  
+  `
   
   _https://localhost:5001_
 
