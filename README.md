@@ -21,15 +21,18 @@ _This web app is intended for a hypothetical client who runs a small hair salon.
 ## Setup/Installation Requirements
 
 * _Download the .NET framework if you do not already have it (version 6.0 or later)_
+ 
   _`https://dotnet.microsoft.com/en-us/download/dotnet`_
   
 * _Download MySQL Community Server and MySQL Workbench if you don't already have them (both from this link). Make note of both the `User ID (UID)` and the `Password (PWD)` that you define in your setup configurations for MySQL. These values will go into your `appsettings.json` file in a few steps_
-  _`https://dev.mysql.com/downloads/`_
+  
+    _`https://dev.mysql.com/downloads/`_
   
 * _Clone this repository to your machine_
 
 * _Open the repository (VS Code is recommended) and create a new file in the root directory called `appsettings.json`. Copy the following code into the file, with your own values for uid and pwd_
-  _`
+ 
+ _`
   {
   "ConnectionStrings": {
       "DefaultConnection": "Server=localhost;Port=3306;database=robert_onstott;uid=[***your user ID here ***];pwd=[*** your password here *** ];"
@@ -39,9 +42,12 @@ _This web app is intended for a hypothetical client who runs a small hair salon.
   
 * _Open MySQL workbench and open local server 3306. Navigate to the Administration tab in the top left. Click the 6th icon down in the navigation bar 'Data Import/Restore'. Select 'Imort from Self Contained File' and select the robert_onstott.sql file in the root directory if this repository. The database is now being hosted on a local server on your machine_
 
-*_Navigate to the HairSalon directory one level down from the root directory and enter the command $dotnet run. This will start the local web server. Enter the URL https://localhost:5001 in a browser window. You are now interacting with the web app_
+* _Navigate to the HairSalon directory one level down from the root directory and enter the command $dotnet run. This will start the local web server. Enter the URL https://localhost:5001 in a browser window. You are now interacting with the web app_
+  
   _`$ cd HairSalon`_
+  
   _`$ dotnet run`_
+  
   _`https://localhost:5001`_
 
 ## Known Bugs
