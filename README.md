@@ -33,11 +33,15 @@ _This web app is intended for a hypothetical client who runs a small hair salon.
 * _Open the repository (VS Code is recommended) and create a new file in the root directory called `appsettings.json`. Copy the following code into the file, with your own values for uid and pwd_
  
  `
-  _{_
-   _"ConnectionStrings": {_
-      _"DefaultConnection": "Server=localhost;Port=3306;database=robert_onstott;uid=[***your user ID here ***];pwd=[*** your password here *** ];"_
-    _}_
-  _}_
+  {
+  
+    "ConnectionStrings": {
+    
+      "DefaultConnection": "Server=localhost;Port=3306;database=robert_onstott;uid=[***your user ID here ***];pwd=[*** your password here *** ];"
+      
+    }
+    
+  }
   `
   
 * _Open MySQL workbench and open local server 3306. Navigate to the Administration tab in the top left. Click the 6th icon down in the navigation bar 'Data Import/Restore'. Select 'Imort from Self Contained File' and select the robert_onstott.sql file in the root directory if this repository. The database is now being hosted on a local server on your machine_
@@ -64,4 +68,4 @@ _The above copyright notice and this permission notice shall be included in all 
 
 _THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE._
 
-Copyright (c) _December 2022_ _Robert 
+Copyright (c) _December 2022_ _Robert Onstott_
