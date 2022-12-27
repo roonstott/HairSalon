@@ -36,13 +36,9 @@ _This web app is intended for a hypothetical client who runs a small hair salon.
   
   ```
        {
-
          "ConnectionStrings": {
-
            "DefaultConnection": "Server=localhost;Port=3306;database=robert_onstott;uid=[***your user ID here ***];pwd=[*** your password here *** ];"
-
          }
-
        }      
   ```
   
@@ -54,7 +50,6 @@ _This web app is intended for a hypothetical client who runs a small hair salon.
   
   ```
         _$ cd HairSalon_
-
         _$ dotnet run_   
 
   ```  
