@@ -54,6 +54,8 @@ _This web app is intended for a hypothetical client who runs a small hair salon.
   ```  
   
   _https://localhost:5001_
+  
+ * _If the localhost:5001 is not loading, you may need to authenticated the https certificate by entering the admnistrator password_
 
 ## Known Bugs
 
