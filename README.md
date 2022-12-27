@@ -2,36 +2,54 @@
 
 #### By _Robert Onstott_
 
-#### _{Brief description of application}_
+#### _Web-based small business application for keeping track of what stylists work within a hair salon, and what clients are signed up with each stylist_
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* _C# and .NET 6.0_
+* _ASP.NET core MVC
+* _Entity Framework Core
+* _MySQL community server_
+* _MySQL Workbench_
+* _VS Code_
+* _Github_
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_This web app is intended for a hypothetical client who runs a small hair salon. The client has multiple stylists working form them, and numerous clients who are signed up with each stylist. Using the ASP.NET core MVC web development framework, this app structures the client and stylist information as object classes with a many-to-one relationship between clients and stylists. All model information is stored in a SQL database._
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* _Download the .NET framework if you do not already have it (version 6.0 or later)_
+  `https://dotnet.microsoft.com/en-us/download/dotnet`
+* _Download MySQL Community Server and MySQL Workbench if you don't already have them (both from this link). Make note of both the User ID (UID) and the Password (PWD) that you define in your setup configurations for MySQL. These values will have to be put into your appsettings.json file in a few steps_
+  `https://dev.mysql.com/downloads/`
+* _Clone this repository to your machine_
+* _Open the repository (VS Code is recommended) and crate a new file in the root directory called appsettings.json. Copy the following code into the file, with your own values or uid and pwd_
+  `{
+  "ConnectionStrings": {
+      "DefaultConnection": "Server=localhost;Port=3306;database=robert_onstott;uid=[***your user ID here ***];pwd=[*** your password here *** ];"
+  }
+}`
+* _Open MySQL workbench and open local server 3306. Navigate to the Administration tab in the top left. Click the 6th icon down in the navigation bar 'Data Import/Restore'. Select 'Imort from Self Contained File' and select the robert_onstott.sql file in the root directory if this repository. The database is now being hosted on a local server on your machine_
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+*_Navigate to the HairSalon directory one level down from the root directory and enter the command $dotnet run. This will start the local web server. Enter the URL https://localhost:5001 in a browser window. You are now interacting with the web app_
+  `$ cd HairSalon
+   $ dotnet run
+   https://localhost:5001`   
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _No known bugs at this time_
 
 ## License
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_MIT_
 
-Copyright (c) _date_ _author name(s)_
+_Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:_
+
+_The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software._
+
+_THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE._
+
+Copyright (c) _December 2022_ _Robert 
