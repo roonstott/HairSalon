@@ -44,7 +44,7 @@ _This web app is intended for a hypothetical client who runs a small hair salon.
   
   
   
-* _Open MySQL workbench and open local server 3306. Navigate to the Administration tab in the top left. Click the 6th icon down in the navigation bar 'Data Import/Restore'. Select 'Imort from Self Contained File' and select the robert_onstott.sql file in the root directory if this repository. The database is now being hosted on a local server on your machine_
+* _Open MySQL workbench and open local server 3306. Navigate to the Administration tab in the top left. Click the 6th icon down in the navigation bar 'Data Import/Restore'. Select 'Imort from Self Contained File' and select the robert_onstott.sql file in the root directory if this repository. Under this, in the section that says 'Default Schema To Be Imported To,' click `New...` and name the schema `robert_onstott` . The database is now being hosted on a local server on your machine_
 
 * _Navigate to the HairSalon directory one level down from the root directory and enter the command $dotnet run. This will start the local web server. Enter the URL https://localhost:5001 in a browser window. You are now interacting with the web app_
   
